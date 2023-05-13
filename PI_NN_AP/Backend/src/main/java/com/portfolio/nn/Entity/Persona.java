@@ -10,24 +10,25 @@ import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
-
-
 @Getter @Setter
 @Entity
 public class Persona {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    
     private Long id;
-    @NotNull
     
+    @NotNull
     @Size(min = 1, max = 50, message = "no cumple con la longitud")
+    
     private String nombre;
-    @NotNull
     
+    @NotNull
     @Size(min = 1, max = 50, message = "no cumple con la longitud")
-    private String apellido;
-    @NotNull
     
+    private String apellido;
+    
+    @NotNull
     @Size(min = 1, max = 50, message = "no cumple con la longitud")
     private String img;
 }
