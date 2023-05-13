@@ -21,16 +21,15 @@ import org.springframework.web.bind.annotation.RestController;
 public class PersonaController {
     @Autowired IPersonaService ipersonaService;
     
-    @GetMapping("/personas/traer")
-    
-    public List<Persona> getPersona() {
-        return ipersonaService.getPersona();
-    }
-    
     @PostMapping("/personas/crear")
     public String createPersona(@RequestBody Persona persona) {
         ipersonaService.savePersona(persona);
         return "La persona fue creada correctamente";
+    }
+    
+    @GetMapping("/personas/traer")
+    public List<Persona> getPersona() {
+        return ipersonaService.getPersona();
     }
     
     @DeleteMapping("/personas/borrar/({id}")
