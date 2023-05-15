@@ -1,24 +1,27 @@
 package com.portfolio.nn.Security.Entity;
 
 import com.portfolio.nn.Security.Enums.RolNombre;
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.validation.constraints.NotNull;
+import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.validation.constraints.NotNull;
+import org.springframework.data.annotation.Id;
+
 
 @Entity
-public class Rol {
+public class Rol implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    
     private int id;
     @NotNull
-    @Enumerated(EnumType.STRING)
+    @Enumerated(EnumType.STRING)    
     private RolNombre rolNombre;
     
-    //Constructor
+    //Contructor
 
     public Rol() {
     }
@@ -27,7 +30,7 @@ public class Rol {
         this.rolNombre = rolNombre;
     }
     
-    //Getters y Setters
+    //Getter y Setter
 
     public int getId() {
         return id;
@@ -44,7 +47,6 @@ public class Rol {
     public void setRolNombre(RolNombre rolNombre) {
         this.rolNombre = rolNombre;
     }
-
     
     
 }
