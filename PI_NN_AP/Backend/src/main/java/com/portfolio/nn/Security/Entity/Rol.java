@@ -1,28 +1,27 @@
 package com.portfolio.nn.Security.Entity;
 
 import com.portfolio.nn.Security.Enums.RolNombre;
-import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
-import org.springframework.data.annotation.Id;
+
+
 
 
 @Entity
-public class Rol implements Serializable {
+public class Rol {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
     @NotNull
-    @Enumerated(EnumType.STRING)    
+    @Enumerated(EnumType.STRING)
     private RolNombre rolNombre;
     
-    //Contructor
-
+    //Constructor
     public Rol() {
     }
 
