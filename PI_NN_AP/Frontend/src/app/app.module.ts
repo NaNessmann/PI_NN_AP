@@ -18,15 +18,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { interceptorProvider } from './service/interceptor-service';
-import { New-ExperienciaComponent } from './components/experiencia/new-experiencia.component';
-import { Edit-ExperienciaComponent } from './components/experiencia/edit-experiencia.component';
-import { New-educacionComponent } from './components/educacion/new-educacion.component';
-import { Edit-educacionComponent } from './components/educacion/edit-educacion.component';
-import { EditSkillComponent } from './components/hys/edit-skill.component';
-import { NewSkillComponent } from './components/hys/new-skill.component';
-import { NewEducacionComponent } from './components/educacion/new-educacion/new-educacion.component';
-import { EditEducacionComponent } from './components/educacion/edit-educacion.component';
-
+import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
+import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
+import { NeweducacionComponent } from './components/educacion/new-educacion.component';
+import { EditeducacionComponent } from './components/educacion/edit-educacion.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,14 +36,11 @@ import { EditEducacionComponent } from './components/educacion/edit-educacion.co
     FooterComponent,
     HomeComponent,
     LoginComponent,
-    New-ExperienciaComponent,
-    Edit-ExperienciaComponent,
-    New-educacionComponent,
-    Edit-educacionComponent,
-    EditSkillComponent,
-    NewSkillComponent,
-    NewEducacionComponent,
-    EditEducacionComponent,
+    NewExperienciaComponent,
+    EditExperienciaComponent,
+    NeweducacionComponent,
+    EditeducacionComponent,
+    
   ],
   imports: [
     BrowserModule,

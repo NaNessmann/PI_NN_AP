@@ -12,7 +12,7 @@ import javax.persistence.Id;
 @Entity
 public class Educacion {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String nombreE;
     private String descripcionE;
